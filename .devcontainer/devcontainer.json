@@ -1,0 +1,107 @@
+{
+  "name": "grr",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node",
+  "portsAttributes": {
+    "3000": {
+      "label": "React App Port",
+      "onAutoForward": "notify"
+    }
+  },
+  "remoteEnv": {
+    "DOCKER_HOST": "unix:///var/run/docker.sock"
+  },
+  "mounts": [
+    "source=/run/user/1000/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
+  "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+  "runArgs": ["-u", "1000:1000", "--name", "grr-react-app"],
+  "remoteUser": "root",
+  "workspaceFolder": "${localWorkspaceFolder}",
+  "workspaceMount": "source=${localWorkspaceFolder},target=${localWorkspaceFolder},type=bind",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "alefragnani.Bookmarks",
+        "bierner.color-info", // JSX and CSS color information
+        "bierner.emojisense", // Emoji sense for markdown
+        "christian-kohler.npm-intellisense", // Autocompletes npm modules in import statements
+        "codezombiech.gitignore",
+        "cssho.vscode-svgviewer", // SVG viewer
+        "davidanson.vscode-markdownlint",
+        "dbaeumer.vscode-eslint", // ESLint
+        "eamodio.gitlens", // IDE Git information
+        "esbenp.prettier-vscode", // Prettier code formatter
+        "github.vscode-pull-request-github", // Github interaction
+        "Gruntfuggly.todo-tree", // Highlights TODO comments
+        "IBM.output-colorizer", // Colorize your output/test logs
+        "JakeWilson.vscode-cdnjs", // Search and embed libraries from cdnjs.com
+        "jpoissonnier.vscode-styled-components", // Styled components
+        "ms-azuretools.vscode-docker", // Docker integration and linting
+        "Orta.vscode-jest", // Facebook's' Jest extension
+        "quicktype.quicktype", // Paste JSON as code
+        "shardulm94.trailing-spaces", // Show trailing spaces
+        "stkb.rewrap", // rewrap comments after n characters on one line
+        "streetsidesoftware.code-spell-checker",
+        "visualstudioexptteam.vscodeintellicode", // AI-assisted development
+        "vscode-icons-team.vscode-icons" // Better file extension icons
+        // "spikespaz.vscode-smoothtype", // smooth cursor animation
+      ],
+      "settings": {
+        "files.eol": "\n",
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "always"
+        },
+        "eslint.validate": [
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact"
+        ],
+        "jest.jestCommandLine": "yarn test",
+        "editor.formatOnSave": true,
+        "testExplorer.useNativeTesting": true,
+        "[javascript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": false
+        },
+        "[javascriptreact]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": false
+        },
+        "[typescript]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": false
+        },
+        "[typescriptreact]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.formatOnSave": false
+        },
+        "prettier-eslint.eslintIntegration": true,
+        "[json]": {
+          "editor.quickSuggestions": {
+            "strings": true
+          },
+          "editor.tabSize": 2,
+          "editor.suggest.insertMode": "replace",
+          "prettier.tabWidth": 2
+        },
+        "[jsonc]": {
+          "editor.quickSuggestions": {
+            "strings": true
+          },
+          "editor.tabSize": 2,
+          "editor.suggest.insertMode": "replace",
+          "prettier.tabWidth": 2
+        },
+        "[jsonl]": {
+          "editor.quickSuggestions": {
+            "strings": true
+          },
+          "editor.tabSize": 2,
+          "editor.suggest.insertMode": "replace",
+          "prettier.tabWidth": 2
+        }
+      }
+    }
+  }
+}
