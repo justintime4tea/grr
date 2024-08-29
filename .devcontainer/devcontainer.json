@@ -11,7 +11,8 @@
     "DOCKER_HOST": "unix:///var/run/docker.sock"
   },
   "mounts": [
-    "source=/run/user/1000/docker.sock,target=/var/run/docker.sock,type=bind"
+    "source=/run/user/1000/docker.sock,target=/var/run/docker.sock,type=bind",
+    "source=/home/justin/Development/pnpm-store,target=/home/justin/Development/pnpm-store,type=bind"
   ],
   "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
   "runArgs": ["-u", "1000:1000", "--name", "grr-react-app"],

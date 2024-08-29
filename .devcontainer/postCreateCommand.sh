@@ -1,6 +1,5 @@
-#npm install -g corepack
-
-#corepack enable
+# Enable pnpm TS/JS package manager
+corepack enable pnpm
 
 # Add Docker's official GPG key:
 sudo apt-get update
