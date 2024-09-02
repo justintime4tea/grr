@@ -12,7 +12,7 @@
   },
   "mounts": [
     "source=/run/user/1000/docker.sock,target=/var/run/docker.sock,type=bind",
-    "source=/home/justin/Development/pnpm-store,target=/home/justin/Development/pnpm-store,type=bind"
+    "source=/home/justin/Development/pnpm-store/v3,target=${localWorkspaceFolder}/.pnpm-store/v3,type=bind"
   ],
   "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
   "runArgs": ["-u", "1000:1000", "--name", "grr-react-app"],
@@ -23,6 +23,7 @@
     "vscode": {
       "extensions": [
         "alefragnani.Bookmarks",
+        "amazonwebservices.aws-toolkit-vscode", // Amazon AWS-CDK toolkit
         "bierner.color-info", // JSX and CSS color information
         "bierner.emojisense", // Emoji sense for markdown
         "christian-kohler.npm-intellisense", // Autocompletes npm modules in import statements

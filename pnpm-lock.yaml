@@ -101,6 +101,9 @@ importers:
 
   infra/grr-cdk:
     dependencies:
+      '@aws-cdk/aws-servicecatalogappregistry-alpha':
+        specifier: 2.154.1-alpha.0
+        version: 2.154.1-alpha.0(aws-cdk-lib@2.154.1(constructs@10.3.0))(constructs@10.3.0)
       aws-cdk-lib:
         specifier: 2.154.1
         version: 2.154.1(constructs@10.3.0)
@@ -160,6 +163,13 @@ packages:
 
   '@aws-cdk/asset-node-proxy-agent-v6@2.0.3':
     resolution: {integrity: sha512-twhuEG+JPOYCYPx/xy5uH2+VUsIEhPTzDY0F1KuB+ocjWWB/KEDiOVL19nHvbPCB6fhWnkykXEMJ4HHcKvjtvg==}
+
+  '@aws-cdk/aws-servicecatalogappregistry-alpha@2.154.1-alpha.0':
+    resolution: {integrity: sha512-VWrgiMB2JT1nNMqGvyWfBdimurj1C+8H4cM90ZHJyMPoJ6tSC7MT9mau7kZ8Nz+XdkqriCLjkYghJQtNlQjqqw==}
+    engines: {node: '>= 14.15.0'}
+    peerDependencies:
+      aws-cdk-lib: ^2.154.1
+      constructs: ^10.0.0
 
   '@aws-cdk/cloud-assembly-schema@36.0.20':
     resolution: {integrity: sha512-pvuY9V431KwTZJtO/eeH3j34vF2I4VadXHX1RMQcsSFy4a2v2VZyAbXXI6s0Cc7X7bwZDfWdsfjjNhspO0nr2w==}
@@ -6053,6 +6063,11 @@ snapshots:
   '@aws-cdk/asset-kubectl-v20@2.1.2': {}
 
   '@aws-cdk/asset-node-proxy-agent-v6@2.0.3': {}
+
+  '@aws-cdk/aws-servicecatalogappregistry-alpha@2.154.1-alpha.0(aws-cdk-lib@2.154.1(constructs@10.3.0))(constructs@10.3.0)':
+    dependencies:
+      aws-cdk-lib: 2.154.1(constructs@10.3.0)
+      constructs: 10.3.0
 
   '@aws-cdk/cloud-assembly-schema@36.0.20': {}
 

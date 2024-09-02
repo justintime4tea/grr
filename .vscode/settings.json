@@ -1,5 +1,6 @@
 {
   "docker.environment": {
     "DOCKER_HOST": "unix:///var/run/docker.sock"
-  }
+  },
+  "jest.jestCommandLine": "pnpm run --filter grr-landing test"
 }
